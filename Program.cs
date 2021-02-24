@@ -20,7 +20,6 @@ namespace MarketStore
             Console.WriteLine(silverCard.PrintPurchase());
             Console.WriteLine(goldCard.PrintPurchase());
 
-
         }
     }
 }
