@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Text;
 
 namespace MarketStore
 {
     public class Card
     {
-
+      
+        private  decimal _turnover;
+        private  decimal _purchase;
+        private  string _cardType;
 
         public Card(Owner owner, decimal turnover, decimal purchase, string cardType)
         {
@@ -18,13 +21,48 @@ namespace MarketStore
 
         public Owner Owner { get; set; }
 
-        public decimal Turnover { get; set; }
+        public decimal Turnover
+        {
+            get => _turnover;
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Number cannot be less then 0");
+                }
 
-        public decimal Purchase { get; set; }
+                _turnover = value;
+            }
+        }
+
+        public decimal Purchase
+        {
+            get => _purchase;
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Number cannot be less then 0");
+                }
+
+                _purchase = value;
+            }
+        }
 
         public decimal InitialDiscount { get; set; }
 
-        public string CardType { get; set; }
+        public string CardType
+        {
+            get => _cardType;
+            set
+            {
+                if( value != "Gold" && value !="Silver" && value !="Bronze")
+                {
+                    throw new ArgumentException("Invalid card type");
+                }
+                _cardType = value;
+            }
+        }
 
         public string PrintPurchase()
         {
@@ -32,7 +70,7 @@ namespace MarketStore
             var currentDiscountPercent = GetDiscount();
             if (currentDiscountPercent != 0)
             {
-               discountInMoney = (this.Purchase * currentDiscountPercent)/100;
+                discountInMoney = (this.Purchase * currentDiscountPercent) / 100;
             }
             var total = this.Purchase - discountInMoney;
 

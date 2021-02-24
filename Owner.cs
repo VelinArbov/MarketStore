@@ -1,21 +1,44 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace MarketStore
 {
     public class Owner
     {
+
+        private string _firstName;
+        private string _lastName;
+
         public Owner(string firstName, string lastName)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
         }
 
-        public string FirstName { get; set; }
+        private string FirstName
+        {
+            set
+            {
+                if (value.Length < 3)
+                {
+                    throw new ArgumentException("First name cannot contain fewer than 3 symbols!");
+                }
 
-        public string LastName { get; set; }
+                _firstName = value;
+            }
+        }
+
+        private string LastName
+        {
+            set
+            {
+                if (value.Length < 3)
+                {
+                    throw new ArgumentException("Last name cannot contain fewer than 3 symbols!");
+                }
+
+                _lastName = value;
+            }
+        }
 
 
     }
