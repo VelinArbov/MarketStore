@@ -107,9 +107,5 @@ namespace MarketStore
 
         }
 
-
-
-
-
     }
 }
