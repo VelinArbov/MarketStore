@@ -7,8 +7,13 @@ namespace MarketStore
         static void Main(string[] args)
         {
 
+<<<<<<< HEAD
             var owner2 = new Owner("Georgi", "Ivanov");
             var bronzeCard = new Card(owner2, 0, 150, "Bronze");
+=======
+            var owner2 = new Owner("Georgi", "Georgiev");
+            var bronzeCard = new Card(owner2, 301, 100, "Bronze");
+>>>>>>> 704628b2858cf57c02b52a4714bb42778d952304
 
             var owner1 = new Owner("Velin", "Arbov");
             var silverCard = new Card(owner1, 301, 850, "Silver");
@@ -21,6 +26,7 @@ namespace MarketStore
             Console.WriteLine(silverCard.PrintPurchase());
             Console.WriteLine(goldCard.PrintPurchase());
 
+<<<<<<< HEAD
 
             //Exceptions:
             //var wrongName = new Owner("", "Georgiev");
@@ -35,6 +41,8 @@ namespace MarketStore
 
 
 
+=======
+>>>>>>> 704628b2858cf57c02b52a4714bb42778d952304
         }
     }
 }

@@ -145,9 +145,5 @@ namespace MarketStore
 
         }
 
-
-
-
-
     }
 }
