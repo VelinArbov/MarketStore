@@ -106,7 +106,7 @@ namespace MarketStore
             }
             else if (this.CardType == "Silver")
             {
-                //The silver card comes with an initial discount rate of 2%. In case, the turnover is above $300, the rate is 3.5%.
+               
                 if (this.Turnover > 300)
                 {
                     return 3.5m;
@@ -117,7 +117,7 @@ namespace MarketStore
 
             else if (this.CardType == "Silver")
             {
-                //The silver card comes with an initial discount rate of 2%. In case, the turnover is above $300, the rate is 3.5%.
+             
                 if (this.Turnover > 300)
                 {
                     return 3.5m;
@@ -127,7 +127,7 @@ namespace MarketStore
             }
             else if (this.CardType == "Gold")
             {
-                //he gold card comes with an initial discount rate of 2%. The discount rate grows 1% for each $100 from the turnover, capping at 10%.
+               
 
                 var rate = this.Turnover / 100;
                 if (rate < 2)
