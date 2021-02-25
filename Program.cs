@@ -4,12 +4,9 @@ namespace MarketStore
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            
-            var owner2 = new Owner("Georgi", "Ivanov");
-            var bronzeCard = new Card(owner2, 0, 150, "Bronze");
-
+          
             var owner2 = new Owner("Georgi", "Georgiev");
             var bronzeCard = new Card(owner2, 301, 100, "Bronze");
 
